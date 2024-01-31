@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const initialItems = [
   { id: 1, description: "Passports", quantity: 2, packed: false },
@@ -128,6 +128,11 @@ function List({ UpdateAfterCheck, UpdateAfterDelete, totalItems }) {
           </li>
         ))}
       </ul>
+      <select value="packed">
+        <option value="input">Sort by Input</option>
+        <option value="packed">Sort by Packed</option>
+        <option value="number">Sort by Number</option>
+      </select>
     </div>
   );
 }
